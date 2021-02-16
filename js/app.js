@@ -107,7 +107,7 @@ for(let tryNumber = 1; tryNumber <= 4; tryNumber++){
     }
   } else if(guessedNumber > randomNumber){
     alert('Attemp number ' + tryNumber + '. The number were too high,');
-    if(tryNumber === ){
+    if(tryNumber === 4){
       alert('You could not guess the number, my number was ' + randomNumber);
     }
   } else {
