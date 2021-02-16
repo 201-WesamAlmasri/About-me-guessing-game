@@ -107,7 +107,7 @@ for(let tryNumber = 1; tryNumber <= 4; tryNumber++){
     }
   } else if(guessedNumber > randomNumber){
     alert('Attemp number ' + tryNumber + '. The number were too high,');
-    if(tryNumber === 4){
+    if(tryNumber === ){
       alert('You could not guess the number, my number was ' + randomNumber);
     }
   } else {
@@ -139,7 +139,7 @@ for(let attemptNumber = 1; attemptNumber <= 6; attemptNumber++){
     break;
   } else {
     alert('Attemp number ' + attemptNumber + '. Wrong answer! ');
-    if(attemptNumber === 4){
+    if(attemptNumber === 6){
       alert('You could not guess any name. I have four brothers and their names ' + `${answers[0]}, ${answers[1]}, ${answers[2]} and ${answers[3]}`);
     }
   }
