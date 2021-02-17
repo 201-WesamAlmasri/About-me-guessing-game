@@ -83,12 +83,12 @@ while((knowAboutProgramming !== 'y' && knowAboutProgramming !== 'yes') && (knowA
   console.log('The user think that I love to help other? ' + knowAboutProgramming);
 
   if(knowAboutProgramming === 'y' || knowAboutProgramming ==='yes'){
-    alert('I do not know how you could guess that ' + userName + ', you are right I have some experience with web development using python and if you want to see one of my project that I have made, send me a message.' );
+    alert('I do not know how you could guess that ' + userName + ', you are right I have some experience with web development using python .' );
     points = points + 1;
   } else if(knowAboutProgramming === 'n' || knowAboutProgramming ==='no'){
-    alert('This is not true ' + userName + ', I have some experience with web development using python and if you want to see one of my project that I have made, send me a message.' );
+    alert('This is not true ' + userName + ', I have some experience with web development using python.' );
   } else {
-    alert('This is not true ' + userName + ', I have some experience with web development using python and if you want to see one of my project that I have made, send me a message.' );
+    alert('Invalid input ' + userName );
   }
 }
 
