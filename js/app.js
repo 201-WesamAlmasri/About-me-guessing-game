@@ -97,7 +97,7 @@ let randomNumber = Math.floor(Math.random()*100 + 1);
 console.log('the random number is ', randomNumber);
 
 for(let tryNumber = 1; tryNumber <= 4; tryNumber++){
-  let guessedNumber = prompt('I have a number in my mind from 1 to 100, guess the number. You have four attempts.');
+  let guessedNumber = Number(prompt('I have a number in my mind from 1 to 100, guess the number. You have four attempts.'));
   console.log('The number that the user guessed is ' + guessedNumber);
 
   if (guessedNumber < randomNumber){
@@ -110,10 +110,12 @@ for(let tryNumber = 1; tryNumber <= 4; tryNumber++){
     if(tryNumber === 4){
       alert('You could not guess the number, my number was ' + randomNumber);
     }
-  } else {
+  } else if(guessedNumber === randomNumber) {
     alert('Attemp number ' + tryNumber + '. You guessed it, this is the number that I choosed ' + randomNumber);
     points = points + 1;
     break;
+  } else {
+    alert('Attemp number ' + tryNumber + 'Invalid input!' );
   }
 }
 
@@ -122,7 +124,7 @@ let answers = ['habieb', 'naseem', 'waseem', 'nadeem'];
 let correct = false;
 
 for(let attemptNumber = 1; attemptNumber <= 6; attemptNumber++){
-  let brotherName = prompt('Can you guess on of my brothers name? you have 6 attempts. ').toLowerCase();
+  let brotherName = prompt('Guess on of my brothers name? you have 6 attempts. ').toLowerCase();
   console.log('The name that the user guessed is ' + brotherName);
 
   for(let j = 0; j < answers.length; j++){
