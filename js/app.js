@@ -1,7 +1,6 @@
 'use strict';
 
 function check(promptMessage, yesMessage, noMessage, correctAnswer) {
-
   let value = '';
 
   while ((value !== 'y' && value !== 'yes') && (value !== 'n' && value !== 'no')) {
@@ -25,7 +24,6 @@ function check(promptMessage, yesMessage, noMessage, correctAnswer) {
 // Asking the user about his name
 
 let userName = prompt('Enter your name please.');
-console.log('The user name is ' + userName);
 alert('Hello ' + userName + ', Welcome to my webiste.');
 
 let points = 0;
@@ -54,11 +52,9 @@ check('Do I have a previous experience with web development before the course fr
 
 function checkRandomNumber(){
   let randomNumber = Math.floor(Math.random() * 100 + 1);
-  console.log('the random number is ', randomNumber);
 
   for (let tryNumber = 1; tryNumber <= 4; tryNumber++) {
     let guessedNumber = Number(prompt('I have a number in my mind from 1 to 100, guess the number. You have four attempts.'));
-    console.log('The number that the user guessed is ' + guessedNumber);
 
     if (guessedNumber < randomNumber) {
       alert('Attemp number ' + tryNumber + '. The number were too low,');
@@ -90,7 +86,6 @@ let correct = false;
 function checkBrotherName(){
   for (let attemptNumber = 1; attemptNumber <= 6; attemptNumber++) {
     let brotherName = prompt('Guess on of my brothers name? you have 6 attempts. ').toLowerCase();
-    console.log('The name that the user guessed is ' + brotherName);
 
     for (let j = 0; j < answers.length; j++) {
       if (brotherName === answers[j]) {
