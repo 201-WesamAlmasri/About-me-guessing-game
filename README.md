@@ -4,6 +4,8 @@
 
 This is a website about me with a guessing game.
 
+The Driver of the work is Doa'a Obedat and The Navigator of the work is Wesam Al-masri. The code was worked on together.
+
 The site has a sections about me, education, experience and top ten cities that I want to visit
 
 - The site will ask you about your name, so that it will interact with you as a human
