@@ -77,18 +77,21 @@ for (let tryNumber = 1; tryNumber <= 4; tryNumber++) {
 }
 
 // Question 7 with multiple correct values
-let answers = ['habieb', 'naseem', 'waseem', 'nadeem'];
+let answers = ['habieb', 'naseem', 'waleed', 'nadeem'];
 let correct = false;
+let brotherName;
 
 for (let attemptNumber = 1; attemptNumber <= 6; attemptNumber++) {
-  let brotherName = prompt('Guess on of my brothers name? you have 6 attempts. ').toLowerCase();
+  brotherName = prompt('Guess on of my brothers name? you have 6 attempts. ').toLowerCase();
   console.log('The name that the user guessed is ' + brotherName);
+  console.log(answers);
 
   for (let j = 0; j < answers.length; j++) {
+    console.log(answers[j]);
+    console.log(brotherName);
     if (brotherName === answers[j]) {
       correct = true;
-    } else {
-      correct = false;
+      break;
     }
   }
   if (correct) {
