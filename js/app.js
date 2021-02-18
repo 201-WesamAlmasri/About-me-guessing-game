@@ -50,58 +50,71 @@ check('Do I have a previous experience with web development before the course fr
 
 // Question 6
 
-let randomNumber = Math.floor(Math.random() * 100 + 1);
-console.log('the random number is ', randomNumber);
 
-for (let tryNumber = 1; tryNumber <= 4; tryNumber++) {
-  let guessedNumber = Number(prompt('I have a number in my mind from 1 to 100, guess the number. You have four attempts.'));
-  console.log('The number that the user guessed is ' + guessedNumber);
 
-  if (guessedNumber < randomNumber) {
-    alert('Attemp number ' + tryNumber + '. The number were too low,');
-    if (tryNumber === 4) {
-      alert('You could not guess the number, my number was ' + randomNumber);
+function checkRandomNumber(){
+  let randomNumber = Math.floor(Math.random() * 100 + 1);
+  console.log('the random number is ', randomNumber);
+
+  for (let tryNumber = 1; tryNumber <= 4; tryNumber++) {
+    let guessedNumber = Number(prompt('I have a number in my mind from 1 to 100, guess the number. You have four attempts.'));
+    console.log('The number that the user guessed is ' + guessedNumber);
+
+    if (guessedNumber < randomNumber) {
+      alert('Attemp number ' + tryNumber + '. The number were too low,');
+      if (tryNumber === 4) {
+        alert('You could not guess the number, my number was ' + randomNumber);
+      }
+    } else if (guessedNumber > randomNumber) {
+      alert('Attemp number ' + tryNumber + '. The number were too high,');
+      if (tryNumber === 4) {
+        alert('You could not guess the number, my number was ' + randomNumber);
+      }
+    } else if (guessedNumber === randomNumber) {
+      alert('Attemp number ' + tryNumber + '. You guessed it, this is the number that I choosed ' + randomNumber);
+      points = points + 1;
+      break;
+    } else {
+      alert('Attemp number ' + tryNumber + 'Invalid input!');
     }
-  } else if (guessedNumber > randomNumber) {
-    alert('Attemp number ' + tryNumber + '. The number were too high,');
-    if (tryNumber === 4) {
-      alert('You could not guess the number, my number was ' + randomNumber);
-    }
-  } else if (guessedNumber === randomNumber) {
-    alert('Attemp number ' + tryNumber + '. You guessed it, this is the number that I choosed ' + randomNumber);
-    points = points + 1;
-    break;
-  } else {
-    alert('Attemp number ' + tryNumber + 'Invalid input!');
   }
 }
+
+checkRandomNumber();
+
 
 // Question 7 with multiple correct values
 let answers = ['habieb', 'naseem', 'waseem', 'nadeem'];
 let correct = false;
 
-for (let attemptNumber = 1; attemptNumber <= 6; attemptNumber++) {
-  let brotherName = prompt('Guess on of my brothers name? you have 6 attempts. ').toLowerCase();
-  console.log('The name that the user guessed is ' + brotherName);
+function checkBrotherName(){
+  for (let attemptNumber = 1; attemptNumber <= 6; attemptNumber++) {
+    let brotherName = prompt('Guess on of my brothers name? you have 6 attempts. ').toLowerCase();
+    console.log('The name that the user guessed is ' + brotherName);
 
-  for (let j = 0; j < answers.length; j++) {
-    if (brotherName === answers[j]) {
-      correct = true;
-    } else {
-      correct = false;
+    for (let j = 0; j < answers.length; j++) {
+      if (brotherName === answers[j]) {
+        correct = true;
+        break;
+      } else {
+        correct = false;
+      }
     }
-  }
-  if (correct) {
-    points = points + 1;
-    alert('Attemp number ' + attemptNumber + '. You guessed it, this is one of my brothers name');
-    alert('I have four brothers and their names ' + `${answers[0]}, ${answers[1]}, ${answers[2]} and ${answers[3]}`);
-    break;
-  } else {
-    alert('Attemp number ' + attemptNumber + '. Wrong answer! ');
-    if (attemptNumber === 6) {
-      alert('You could not guess any name. I have four brothers and their names ' + `${answers[0]}, ${answers[1]}, ${answers[2]} and ${answers[3]}`);
+    if (correct) {
+      points = points + 1;
+      alert('Attemp number ' + attemptNumber + '. You guessed it, this is one of my brothers name');
+      alert('I have four brothers and their names ' + `${answers[0]}, ${answers[1]}, ${answers[2]} and ${answers[3]}`);
+      break;
+    } else {
+      alert('Attemp number ' + attemptNumber + '. Wrong answer! ');
+      if (attemptNumber === 6) {
+        alert('You could not guess any name. I have four brothers and their names ' + `${answers[0]}, ${answers[1]}, ${answers[2]} and ${answers[3]}`);
+      }
     }
   }
 }
+
+checkBrotherName();
+
 
 alert('Finally thank you ' + userName + ', your score is ' + points + '/7. Good luck and I hope you enjoyed the game it alot.');
