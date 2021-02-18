@@ -25,15 +25,18 @@ header h1 {
 nav ul li {
     display: inline;
     margin-left: 15px;
+    padding: 7px;
+    border-radius: 7px;
+    background-color: rgb(220, 235, 93);
 }
 
 nav ul li a {
-    color: blue;
+    color: maroon;
     text-decoration: none;
 }
 
-nav ul li a:hover {
-    color: crimson;
+nav ul li:hover {
+    background-color: mediumseagreen;
 }
 
 p {
