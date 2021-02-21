@@ -12,7 +12,7 @@ function check(promptMessage, yesMessage, noMessage, correctAnswer) {
       }
     } else if (value === 'n' || value === 'no') {
       alert(noMessage);
-      if (correctAnswer === 'yes') {
+      if (correctAnswer === 'no') {
         points = points + 1;
       }
     } else {
